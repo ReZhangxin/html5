@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>canvas2</title>
+</head>
+<body onload="draw('canvas')">
+    <canvas id="canvas" width="600" height="700"></canvas>
+    <script>
+        function draw(id){
+            var canvas = document.getElementById(id);
+            if(canvas == null){
+                return false;
+            }
+            var cot = canvas.getContext("2d");
+            cot.fillStyle = "aqua";
+            cot.fillRect(0,0,600,700);
+            for(var i=0;i<=10;i++){
+                cot.beginPath();
+                cot.arc(i*35,i*25,i*10,0,Math.PI*2,true);
+                cot.closePath();
+                cot.fillStyle = "rgba(255,0,0,.25)";
+                cot.fill();
+            }
+        }
+    </script>
+</body>
+</html>
