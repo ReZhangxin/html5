@@ -1,4 +1,4 @@
-# html+css+js基础知识
+# html+css基础知识
 
 ## html
 
